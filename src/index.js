@@ -8,7 +8,10 @@ const inputEl = document.querySelector('#search-box');
 const counrtyList = document.querySelector('.country-list');
 const countryInfo = document.querySelector('.country-info');
 
+
+
 inputEl.addEventListener('input', debounce(onInputCountry, DEBOUNCE_DELAY));
+
 
 function onInputCountry(evt) {
   const searchCountre = evt.target.value.trim();
@@ -40,10 +43,7 @@ function onInputCountry(evt) {
     });
 }
 
-function resetEl() {
-  counrtyList.innerHTML = '';
-  countryInfo.innerHTML = '';
-}
+
 
 function marcupList(data) {
   return data
